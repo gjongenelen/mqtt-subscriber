@@ -19,5 +19,5 @@
                -e MQTT_HOST='MQTT_HOST' \
                -e MQTT_USERNAME='MQTT_USERNAME' \
                -e MQTT_PASSWORD='MQTT_PASSWORD' \
-               pts/mqtt
+               pushtospace/mqtt-subscriber
 

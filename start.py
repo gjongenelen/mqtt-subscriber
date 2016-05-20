@@ -4,6 +4,7 @@ import sys
 import time
 import http.client
 import json
+import datetime
 import paho.mqtt.client as mqtt
 from threading import Thread
 
@@ -19,6 +20,7 @@ class HttpRequest(Thread):
     def run(self):
         connection = http.client.HTTPSConnection(self.host)
         connection.request('POST', '/' + self.endpoint, json.dumps({
+            'timestamp':datetime.datetime.now(),
             'topic': self.topic,
             'payload': self.payload
         }), {'Content-type': 'application/json'})
