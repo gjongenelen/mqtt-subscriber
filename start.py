@@ -20,7 +20,7 @@ class HttpRequest(Thread):
     def run(self):
         connection = http.client.HTTPSConnection(self.host)
         connection.request('POST', '/' + self.endpoint, json.dumps({
-            'timestamp':datetime.datetime.now(),
+            'timestamp': str(datetime.datetime.now()),
             'topic': self.topic,
             'payload': self.payload
         }), {'Content-type': 'application/json'})
