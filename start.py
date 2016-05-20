@@ -25,7 +25,7 @@ class HttpRequest(Thread):
             'payload': self.payload
         }), {'Content-type': 'application/json'})
         response = connection.getresponse()
-        print(self.topic + str(response.getcode()))
+        print(self.topic + " - " + str(response.getcode()))
 
 
 class Process(Thread):
