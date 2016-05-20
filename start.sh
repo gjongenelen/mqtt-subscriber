@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python3 /root/start.py ${MYSQL_HOST} ${MYSQL_USERNAME} ${MYSQL_PASSWORD} ${MYSQL_DATABASE} ${MQTT_HOST} ${MQTT_USERNAME} ${MQTT_PASSWORD}
