@@ -1,5 +1,3 @@
-#MQTT-Subscriber
-
 ## Installation
 
     CREATE TABLE `mqtt_subscriptions` (
