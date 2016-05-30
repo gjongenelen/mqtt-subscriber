@@ -25,7 +25,7 @@ class HttpRequest(Thread):
             'payload': self.payload
         }), {'Content-type': 'application/json'})
         response = connection.getresponse()
-        print(self.topic + " - " + str(response.getcode()))
+        print("["+str(time.strftime("%d/%m %H:%M:%S"))+"] " + str(response.getcode()) + " - " + self.topic + " -> " +self.host+"/"+self.endpoint)
 
 
 class Process(Thread):
